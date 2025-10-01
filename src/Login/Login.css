@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+
+/* ---- Login ----*/
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    padding: 1.25rem;
+    background-color: #ffffff;
+}
+
+.login-compact-container {
+    display: flex;
+    width: 100%;
+    max-width: 70rem;
+    height: 53rem;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+.login-button, 
+.registro-button {
+  background-color: #22333B;
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 0.375rem; 
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;    /* centra verticalmente */
+  justify-content: center; /* centra horizontalmente */
+  gap: 0.2rem;             /* espacio entre icono y texto */
+}
+.registro-button img {
+  transform: scale(1.2); 
+}
+.login-button img,
+.registro-button img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.login-button:hover {
+    background-color: #1a2a32;
+}
+
+.login-form-section {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #22333B;
+}
+
+.login-image-section {
+    flex: 1;
+    overflow: hidden;
+    background-color: #22333B;
+}
+
+.login-title {
+    color: #22333B;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-input {
+    padding: 0.9rem;
+    margin-bottom: 1.2rem;
+    border-radius: 0.375rem;
+    border: 1px solid #22333B;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    color: #22333B;
+}
+
+.login-input:focus {
+    outline: none;
+    border-color: #22333B;
+    box-shadow: 0 0 0 0.125rem rgba(34, 51, 59, 0.25); 
+}
+
+
+.login-register-text {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #22333B;
+    text-align: center;
+}
+
+.login-register-link {
+    color: #22333B;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border: none;
+    background-color: transparent;
+}
+
+.login-register-link:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.login-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+
+@media (max-width: 79.5rem) {
+  html, body {
+    overflow: auto; 
+  }
+
+  .login-page-container {
+    min-height: auto; 
+    padding: 1rem;
+  }
+
+  .login-compact-container {
+    max-width: 45rem;   
+    height: auto;      
+    min-height: 30rem;  
+  }
+
+  .login-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .login-form {
+    max-width: 16rem;
+  }
+
+  .login-input,
+  .login-button {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+}
+
+
+@media (max-width: 48rem) {
+    .login-compact-container {
+        flex-direction: column;
+        height: auto;
+        max-width: 25rem;
+    }
+
+    .login-image-section {
+        display: none;
+    }
+
+    .login-form-section {
+        padding: 2rem 1.5rem;
+    }
+
+    html, body {
+        overflow: auto;
+    }
+}
+
+
+
+/* ---- Registro ---- */
+
+.registro-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    padding: 1.25rem;
+}
+
+/* Contenedor principal */
+.registro-compact-container {
+    display: flex;
+    width: 100%;
+    max-width: 70rem;
+    height: 50rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Sección formulario */
+.registro-form-section {
+    flex: 1;
+    background-color: #ffffff; /* blanco liso */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    align-items: center;
+}
+
+/* Título */
+.registro-title {
+    color: #000000; /* negro */
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Formulario */
+.registro-form {
+    width: 100%;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inputs */
+.registro-input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #000000; /* borde negro */
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+    color: #000000;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1.8rem;
+}
+
+.registro-input::placeholder {
+    color: #666;
+}
+
+/* Botón */
+
+.registro-button:hover {
+    background-color: #1a252b;
+}
+
+/* Texto enlace */
+.login-register-text {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #000000;
+    text-align: center;
+}
+
+.login-register-link {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.login-register-link:hover {
+    text-decoration: underline;
+}
+
+/* Sección imagen derecha */
+.registro-image-section {
+    flex: 1;
+    overflow: hidden;
+}
+
+.registro-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+
+@media (max-width: 79.5rem) {
+  html, body {
+    overflow: auto; /* permite scroll */
+  }
+
+  .registro-page-container {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .registro-compact-container {
+    max-width: 45rem;   /* más compacto */
+    height: auto;
+    min-height: 30rem;  /* altura mínima */
+  }
+
+  .registro-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .registro-form {
+    max-width: 15rem;
+  }
+
+  .registro-input,
+  .registro-button {
+    font-size: 0.6rem;
+    padding: 0.7rem;
+  }
+}
+
+
+@media (max-width: 48rem) {
+    .registro-compact-container {
+        flex-direction: column;
+        height: auto;
+        max-width: 25rem;
+    }
+
+    .registro-image-section {
+        display: none;
+    }
+
+    .registro-form-section {
+        padding: 2rem 1.5rem;
+        align-items: stretch;
+    }
+    
+    html, body {
+        overflow: auto;
+    }
+}

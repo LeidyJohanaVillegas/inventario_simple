@@ -1,0 +1,266 @@
+/***** INICIO *****/
+body {
+  font-size: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20rem 1fr; /* Sidebar fijo y contenido principal */
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.ordenes-section {
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 5px 50px 10px;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2); /* sombra solo derecha y abajo */
+}
+
+.main-content {
+  margin-left: 0; /* Eliminamos el margen porque ahora usamos grid */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  grid-column: 2; /* Colocamos el contenido principal en la segunda columna */
+}
+
+.content-area {
+  padding: 2px 9rem 40px 10rem;
+  overflow-y: auto; /* Scroll vertical */
+  color: #3b4b42;
+  flex-grow: 1;
+  max-height: calc(100vh - 120px); /* Ajusta con header fijo */
+}
+
+/* Personalizar la barra de scroll */
+.content-area::-webkit-scrollbar {
+  width: 8px;
+}
+.content-area::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.content-area::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+}
+.content-area::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+h2,
+h3 {
+  color: #22333B;
+  margin-bottom: 15px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* Tablas con grid */
+.table-grid {
+  display: grid;
+  background-color: #d9d9d952;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgb(0 0 0 / 0.1);
+  margin-bottom: 20px;
+}
+
+.inventario-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+.ordenes-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* Encabezado */
+.grid-header {
+  background-color: #22333B;
+  color: #f1f6ef;
+  font-weight: 500;
+  padding: 14px 50px;
+  font-size: 23px;
+  letter-spacing: 0.4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Celdas */
+.grid-cell {
+  padding: 12px 55px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d6e5d7;
+  min-height: 40px;
+}
+
+/* Filas */
+.grid-row {
+  display: contents;
+}
+.grid-row > div {
+  border-bottom: 1px solid #d6e5d7;
+}
+.grid-row > div:last-child {
+  border-bottom: none;
+}
+
+/* Botones */
+.action-btn {
+  background-color: #22333B;
+  color: white;
+  border: none;
+  padding: 9px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.action-btn:hover {
+  background-color: #3f545e;
+}
+
+.btn-components{
+  background-color: #22333B;
+  color: white;
+  border: none;
+  padding: 11px 17px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  display: inline-block;       
+  text-align: center;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr ; /* dos columnas iguales */
+  margin-top: 20px;
+}
+
+.btn-container .btn-components:first-child {
+  justify-self: start; 
+}
+
+.btn-container .btn-components:last-child {
+  justify-self: end;
+}
+
+.btn-container-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* tres columnas iguales */
+  margin-top: 20px;
+}
+
+.btn-container-3 .btn-components:nth-child(1) {
+  justify-self: start; /* primer botón a la izquierda */
+}
+
+.btn-container-3 .btn-components:nth-child(2) {
+  justify-self: center; /* segundo al centro */
+}
+
+.btn-container-3 .btn-components:nth-child(3) {
+  justify-self: end; /* tercero a la derecha */
+}
+
+
+
+/*********LOTES**********/
+
+/* === GRID PARA LOTES (6 columnas) === */
+.lotes-grid {
+  grid-template-columns: repeat(6, 1fr);
+  display: grid;
+  background-color: #d9d9d952;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgb(0 0 0 / 0.1);
+  margin-bottom: 20px;
+}
+
+/* Encabezado para lotes */
+.lotes-grid .grid-header {
+  background-color: #22333B;
+  color: #f1f6ef;
+  font-weight: 500;
+  padding: 14px 35px;
+  font-size: 23px;
+  letter-spacing: 0.4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Celdas para lotes */
+.lotes-grid .grid-cell {
+  padding: 12px 45px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d6e5d7;
+  min-height: 40px;
+}
+
+/* Filas para lotes */
+.lotes-grid .grid-row {
+  display: contents;
+}
+.lotes-grid .grid-row > div {
+  border-bottom: 1px solid #d6e5d7;
+}
+.lotes-grid .grid-row > div:last-child {
+  border-bottom: none;
+}
+
+
+
+/**** RESPONSIVE PARA 1366x768 ****/
+@media (max-width: 1600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    grid-template-columns: 17rem 1fr; /* Sidebar más pequeño */
+  }
+
+  .content-area {
+    padding: 10px 6rem; /* menos padding lateral */
+  }
+
+  .ordenes-section {
+    padding: 5px 20px 10px;
+    border-radius: 15px;
+  }
+
+  .grid-header {
+    font-size: 18px;
+    padding: 10px 37px;
+  }
+
+  .grid-cell {
+    padding: 10px 40px;
+    font-size: 15px;
+  }
+
+  .action-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .lotes-grid .grid-header {
+  padding: 10px 35px;
+  font-size: 18px;
+
+}
+}
+
+.btn-confirm-container {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 10px;
+  height: 40px;
+}

@@ -1,0 +1,186 @@
+/* === Overlay General === */
+.historial-overlay,
+.descargar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* === Contenedores === */
+.historial-container,
+.descargar-container {
+  background: #fff;
+  border-radius: 8px;
+  width: 700px;
+  max-height: 90vh;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.descargar-container {
+  width: 400px;
+}
+
+/* === Headers === */
+.historial-header,
+.descargar-header {
+  background: #22333B;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.historial-header h2{
+    margin-left: 16rem;
+}
+
+
+.descargar-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.historial-close,
+.descargar-close {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+/* === Body === */
+.historial-body,
+.descargar-body {
+  padding: 20px 30px;
+}
+
+/* Filtros */
+.historial-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.historial-row label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+}
+
+.historial-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Opciones Descargar */
+.descargar-body {
+  text-align: center;
+}
+
+.descargar-options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.btn-formato {
+  background: #fff;
+  color: #22333B;
+  border: 2px solid #22333B;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-formato:hover {
+  background: #f0f0f0;
+}
+
+/* === Tabla Historial === */
+.historial-tabla-contenedor {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.historial-tabla-contenedor table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historial-tabla-contenedor thead {
+  background: #22333B;
+  color: #fff;
+}
+
+.historial-tabla-contenedor th,
+.historial-tabla-contenedor td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.historial-tabla-contenedor tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.historial-tabla-contenedor tbody tr:hover {
+  background: #f0f0f0;
+}
+
+/* === Footer === */
+.historial-footer,
+.descargar-footer {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.btn-cerrar {
+  background: #22333B;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-cerrar:hover {
+  background: #1a252b;
+}
+
+.btn-descargar{
+    background: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
