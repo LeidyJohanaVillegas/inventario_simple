@@ -1,0 +1,14 @@
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+python-dotenv>=1.0.1
+mysql-connector-python>=8.4.0
+passlib[bcrypt]>=1.7.4
+requests>=2.32.5
+python-jose[cryptography]>=3.3.0
+pydantic[email]>=2.5.0
+python-multipart>=0.0.7
+# Dependencias para funcionalidad QR y YOLO
+qrcode==8.0
+opencv-python==4.10.0.84
+ultralytics==8.3.51
+Pillow==11.0.0
